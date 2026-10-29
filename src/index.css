@@ -1,0 +1,501 @@
+
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Rubik:wght@300;400;500;600;700;800&display=swap");
+
+/* ========================================
+   TEMA JOVIX
+======================================== */
+
+@theme {
+  --color-jovix-bg: #040d25;
+  --color-jovix-panel: #081a3e;
+  --color-jovix-cyan: #00c8ff;
+  --color-jovix-blue: #00a2ff;
+  --font-sans: "Rubik", "Manrope", sans-serif;
+}
+
+/* ========================================
+   CONFIGURAÇÕES GERAIS
+======================================== */
+
+:root {
+  font-family: "Rubik", "Manrope", sans-serif;
+  color: #fff;
+  background: #040d25;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #040d25;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  cursor: pointer;
+}
+
+::selection {
+  background: #00c8ff;
+  color: #001126;
+}
+
+/* ========================================
+   FUNDO E EFEITOS
+======================================== */
+
+.hero-grid {
+  background-color: #040d25;
+  background-image:
+    linear-gradient(rgba(0, 200, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 200, 255, 0.035) 1px, transparent 1px);
+  background-size: 38px 38px;
+}
+
+.panel {
+  border: 1px solid rgba(0, 200, 255, 0.2);
+  background: linear-gradient(
+    145deg,
+    rgba(8, 26, 62, 0.96),
+    rgba(4, 17, 43, 0.92)
+  );
+}
+
+.glow {
+  box-shadow: 0 0 55px rgba(0, 162, 255, 0.12);
+}
+
+/* ========================================
+   BOTÕES
+======================================== */
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  border: 1px solid #00c8ff;
+  border-radius: 0.75rem;
+  background: #00c8ff;
+  color: #001126;
+  padding: 0.82rem 1.2rem;
+  font-weight: 750;
+  transition: 0.2s;
+}
+
+.btn-primary:hover {
+  background: #66ddff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px #00c8ff25;
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  border: 1px solid rgba(0, 200, 255, 0.48);
+  border-radius: 0.75rem;
+  padding: 0.78rem 1.15rem;
+  color: #e8faff;
+  font-weight: 650;
+  transition: 0.2s;
+}
+
+.btn-secondary:hover {
+  background: rgba(0, 200, 255, 0.09);
+  border-color: #00c8ff;
+}
+
+/* ========================================
+   CAMPOS DE FORMULÁRIO
+======================================== */
+
+.field {
+  width: 100%;
+  min-width: 0;
+  border: 1px solid rgba(148, 190, 230, 0.24);
+  border-radius: 0.75rem;
+  background: #06132e;
+  color: #f8fbff;
+  padding: 0.85rem 1rem;
+  outline: none;
+}
+
+.field:focus {
+  border-color: #00c8ff;
+  box-shadow: 0 0 0 3px rgba(0, 200, 255, 0.12);
+}
+
+.field::placeholder {
+  color: #8294b2;
+}
+
+.field option {
+  background: #06132e;
+  color: white;
+}
+
+/* ========================================
+   PÁGINAS E TÍTULOS
+======================================== */
+
+.page-wrap {
+  min-height: 75vh;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem 5rem;
+}
+
+.page-title {
+  margin-top: 0.5rem;
+  font-size: clamp(2.1rem, 5vw, 3.3rem);
+  font-weight: 850;
+  letter-spacing: -0.035em;
+  line-height: 1.1;
+}
+
+.eyebrow {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  color: #00c8ff;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #8fa7c7;
+  font-size: 0.9rem;
+}
+
+.back-link:hover {
+  color: #00c8ff;
+}
+
+/* ========================================
+   CARDS E ÍCONES
+======================================== */
+
+.icon-box {
+  display: grid;
+  width: 3rem;
+  height: 3rem;
+  place-items: center;
+  border: 1px solid rgba(0, 200, 255, 0.2);
+  border-radius: 0.9rem;
+  background: rgba(0, 200, 255, 0.1);
+  color: #00c8ff;
+}
+
+.stat-card {
+  position: relative;
+  display: block;
+  border: 1px solid rgba(0, 200, 255, 0.2);
+  border-radius: 1.25rem;
+  background: linear-gradient(145deg, #0a204a, #06132e);
+  padding: 1.5rem;
+  transition: 0.2s;
+}
+
+.stat-card:hover,
+.subject-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(0, 200, 255, 0.65);
+  box-shadow: 0 12px 35px rgba(0, 162, 255, 0.1);
+}
+
+.subject-card {
+  border: 1px solid rgba(0, 200, 255, 0.22);
+  border-radius: 1.2rem;
+  background: linear-gradient(145deg, #0a204a, #06132e);
+  padding: 1.35rem;
+  transition: 0.2s;
+}
+
+/* ========================================
+   CARDS DE FUNCIONALIDADES
+======================================== */
+
+.feature-card {
+  border: 2px solid #00a2ff;
+  border-radius: 1rem;
+  background: #041542;
+  padding: 1.4rem;
+  text-align: center;
+  transition: 0.25s;
+}
+
+.feature-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 0 30px rgba(0, 162, 255, 0.2);
+}
+
+.feature-card img {
+  width: 100%;
+  height: 235px;
+  object-fit: cover;
+  border: 1px solid #00a2ff;
+  border-radius: 0.7rem;
+}
+
+.feature-card h3 {
+  margin-top: 1.1rem;
+  color: #00c8ff;
+  font-size: 1.2rem;
+  font-weight: 750;
+}
+
+.feature-card p {
+  margin-top: 0.55rem;
+  color: #bdc9dc;
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+/* ========================================
+   GALERIA
+======================================== */
+
+.gallery-card {
+  border: 1px solid rgba(0, 162, 255, 0.45);
+  border-radius: 1rem;
+  background: #071a3c;
+  padding: 0.8rem;
+  transition: 0.2s;
+}
+
+.gallery-card:hover {
+  transform: translateY(-5px);
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: contain;
+  border-radius: 0.6rem;
+  background: #020817;
+}
+
+.gallery-card h3 {
+  padding: 0.9rem 0.2rem 0.3rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* ========================================
+   EQUIPE
+======================================== */
+
+.team-card {
+  border: 1px solid rgba(0, 200, 255, 0.2);
+  border-radius: 1rem;
+  background: #061633;
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.team-card img {
+  width: 116px;
+  height: 116px;
+  margin: 0 auto 1rem;
+  border: 2px solid #00a2ff;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.team-card h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.team-card p {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: #93a4bf;
+}
+
+.team-card span {
+  display: inline-block;
+  margin-top: 0.75rem;
+  color: #00c8ff;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+/* ========================================
+   HEADER E MENU
+======================================== */
+
+.hamburger {
+  display: flex;
+  width: 34px;
+  height: 29px;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2px 0;
+  background: transparent;
+  border: 0;
+  transition: transform 0.2s;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 8px;
+  background: #fff;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.hamburger:hover {
+  transform: scale(1.06);
+}
+
+.hamburger.is-open span:first-child {
+  transform: translateY(11px) rotate(45deg);
+}
+
+.hamburger.is-open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.is-open span:last-child {
+  transform: translateY(-12px) rotate(-45deg);
+}
+
+.menu-screen {
+  position: fixed;
+  inset: 82px 0 0;
+  z-index: 60;
+  overflow-y: auto;
+  background: rgba(0, 5, 18, 0.98);
+  backdrop-filter: blur(18px);
+  padding: 4rem 1.5rem;
+}
+
+.menu-list {
+  width: min(620px, 100%);
+  margin: 0 auto;
+}
+
+.menu-list > a {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  border-bottom: 1px solid rgba(0, 200, 255, 0.13);
+  padding: 1.1rem 0.5rem;
+  color: #fff;
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  font-weight: 700;
+  transition: 0.2s;
+}
+
+.menu-list > a span {
+  color: #00c8ff;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+}
+
+.menu-list > a:hover {
+  padding-left: 1rem;
+  color: #00c8ff;
+}
+
+.menu-close {
+  position: absolute;
+  right: 2rem;
+  top: 1.2rem;
+  color: #fff;
+  font-size: 2.7rem;
+  line-height: 1;
+}
+
+.menu-close:hover {
+  color: #00c8ff;
+}
+
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
+
+@media (min-width: 768px) {
+  .page-wrap {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .feature-card img {
+    height: 210px;
+  }
+
+  .gallery-card img {
+    height: 190px;
+  }
+}
+
+
+
+/* Header no topo: maior e azul-marinho sólido */
+
+.jovix-header {
+  transition:
+    height 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.jovix-header.header-top {
+  background: #0b1c3a;
+  border-bottom: 1px solid rgba(0, 200, 255, 0.16);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Header ao rolar: menor e translúcido */
+
+.jovix-header.header-scrolled {
+  background: rgba(8, 25, 52, 0.76);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(0, 200, 255, 0.13);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Menu acompanha a altura do header */
+
+.menu-screen.menu-top {
+  top: 90px;
+}
+
+.menu-screen.menu-scrolled {
+  top: 68px;
+}
