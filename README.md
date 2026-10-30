@@ -29,12 +29,6 @@ A pasta `src/api/` contém `mockApi.js`, que funciona como uma API simulada dent
 
 Os dados iniciais ficam definidos nesse arquivo. As alterações são salvas no `localStorage` do navegador, permitindo atualizar a página sem perder os dados cadastrados naquele navegador. Não existe servidor, banco de dados, SQL ou serviço externo.
 
-Para restaurar os dados iniciais, abra o console do navegador e execute:
-
-```js
-localStorage.removeItem("jovix-demo-v1");
-location.reload();
-```
 
 ## Rotas
 - `/` — Landing page com as seções A Solução, Público-Alvo, Galeria, Nossa Equipe e Contato.
@@ -45,7 +39,7 @@ location.reload();
 - `/estudar` — Busca textual nos materiais cadastrados.
 
 ## Estrutura principal
-```text
+```
 src/
 ├── api/
 │   └── mockApi.js
@@ -68,6 +62,10 @@ src/
 └── main.jsx
 ```
 
-## Observação
-Esta entrega é uma simulação acadêmica. A busca é textual e os dados são locais; não há login, autenticação, câmera, reconhecimento por IA, backend próprio ou integração com banco de dados.
-# SPRINT4-WEB-FRONT
+**## LINK DO VERCEL**
+
+https://sprint4-web-front.vercel.app
+
+**## LINK DO GITHUB**
+
+https://github.com/LAB-404-1ESPI/SPRINT4-WEB-FRONT
